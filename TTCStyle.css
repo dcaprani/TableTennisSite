@@ -1,0 +1,374 @@
+
+
+
+h1{font-family: "comic sans ms"; font-size: 80px; color: white; text-align: center}
+h2{font-family: "comic sans ms"; font-size: 25px; color: green; text-align: center}
+
+#clock
+{
+font-family: "comic sans ms";
+font-size: 15px;
+color: green;
+margin-top: 0;
+margin-left: 4em;
+}
+
+#app_form
+{
+margin-left: 10em;
+width: 60%;
+background-color: #ccffcc; 
+background-repeat: repeat-x;
+background-attachment: fixed;
+font-family: "comic sans ms";
+font-size: 10px;
+color: green;
+}
+
+#menu ul
+{
+padding-left: 20px !important;
+font-size: 10pt;
+font-family: "comic sans ms";
+color: green;
+//list-style-image:url(ball.gif);
+}
+
+ul.textLinks li
+{
+width: 60%px;
+height: 15px;    
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background-color:white;
+line-height: 10px;
+text-align: center;
+padding: 5px;
+margin: 5px    
+}
+
+.tipsBoxes img
+{
+	width: 124%
+}
+
+.videoClipL iframe
+{
+	width: 210px;
+	height: 157px;
+}
+
+ul.bottom_ul
+{
+margin-top: 50px;
+}
+
+.tipsBox
+{
+	width: 100%;
+	height: 50%;
+	float: left;
+}
+
+.videoClipL
+{
+	float: left;
+}
+
+.videoClipR
+{
+	float: right;
+}
+
+ul.logo li
+{
+width: 150px;
+margin-top: 0px;
+text-align: center;
+}
+
+#wrapper li {
+position: absolute;
+width: 10px;
+height: 10px;    
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background-color:white;
+line-height: 10px;
+font-color: white;
+text-align:center;
+cursor:pointer; 
+ }
+
+li.image
+{
+margin-top: 20px;
+}
+
+.projImg
+{
+position: absolute
+left: 90px;
+z-index:2
+}
+
+div.img a:hover img
+{
+border:1px solid #0000ff;
+}
+div.img img
+{
+margin-top: 2px;
+margin-bottom: 2px;
+border:1px solid green
+}
+
+#box
+{
+font-family: "comic sans ms";
+font-size: 18px;
+font-weight: bold;
+color: green;
+margin-right: 0px;
+margin-left:0;
+width: 80%;
+padding-left:.2px;
+padding-right:.2px;
+border: 0;
+line-height: 190%;
+padding: 0;
+}
+
+#banner
+{
+width: 90%;
+height: 150px;
+margin-top: 5px;
+margin-bottom: 0;
+margin-left: 60px;
+padding: .5em;
+background-color: green;
+color: #333;
+border:4px solid white;
+line-height: 10%;
+}
+
+#menu_box
+{
+float: left;
+width: 15%;
+height: 100%;
+margin-top: 10px;
+margin-right: 0;
+margin-left: 60px;
+background-color: green;
+color: #333;
+border:3px solid white;
+padding: 20px !important;
+} 
+
+#leftnav
+{
+position: absolute;
+top:30px;
+left:90px;
+float: left;
+width: 116px;
+height: 109px;
+padding: 0;
+margin: 0;
+border: 1px solid black;
+z-index:0
+}
+
+#rightnav
+{
+position: absolute;
+top:30px;
+right:100px;
+float: right;
+width: 116px;
+height: 109px;
+padding: 0;
+margin: 0;
+border: 1px solid black
+}
+
+#name
+{
+position: absolute;
+text-align: center;
+top:30px;
+left: 40%;
+right: 40%;
+width: 20%;
+margin-left: 0px;
+border-left: 0;
+margin-right: 0px;
+border-right: 0;
+padding: .5em;
+z-index:0
+}
+
+#BG_TT
+{
+float: right;
+width: 150px;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: .5em;
+padding-right: 0em;
+margin-right: 0px;
+margin-top: 0px;
+border: 2px solid white;
+}
+
+#LP_TT
+{
+float: left;
+width: 229px;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 1em;
+padding-right: 1.5em;
+margin-bottom: 100px;
+border: 2px solid white;
+}
+
+#CE_TT
+{
+float: right;
+width: 150px;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 0;
+padding-right: 1.5em;
+margin-right: 0px;
+margin-left: .5em;
+border: 0;
+}
+
+#Table_Bats
+{
+float: right;
+width: 150px;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 0;
+padding-right: 1.5em;
+margin-right: 0px;
+border: 0;
+}
+
+#TR_TT
+{
+float: left;
+width: 150px;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 0;
+padding-right: 1.5em;
+margin-bottom: 2px;
+border: 0;
+}
+
+#Blue_Bat
+{
+float: right;
+width: 246px;
+padding-right: 2em;
+border: 0;
+margin-right: 3.5em;
+margin-left: 2em;
+}
+
+#Bat_Grips
+{
+float: left;
+width: 150px;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 0;
+padding-right: 1.5em;
+margin-bottom: 2px;
+border: 0;
+}
+
+
+
+#menu
+{
+font-family: "comic sans ms";
+font-size: 5px;
+color: green;
+border: 0;
+height: 372px;
+}
+
+div.links a:link {color:green}    /* unvisited link */
+div.links a:visited {color:#00FF00} /* visited link */
+div.links a:hover {color:red}   /* mouse over link */
+div.links a:active {color:#0000FF}  /* selected link */
+
+
+ul
+{
+font-size: 10pt;
+font-family: "comic sans ms";
+list-style-type:none;
+//list-style-image:url('ball.gif');
+}
+
+#equipment
+{
+font-family: "comic sans ms"; 
+font-size: 15px; 
+color: green; 
+text-align: center;
+}
+
+#welcome_note
+{
+margin-left: 2.5em;
+font-family: "comic sans ms"; 
+font-size: 30px; 
+color: green; 
+text-align: justify;
+margin-right: 0;
+border: 0;
+}
+
+body, * {
+    padding: 0 !important; margin: 0: }
+
+#wrapper {
+    width:100%; 
+    height: 100%; 
+    z-index:-1;
+}
+
+#wrapper li {
+    position: absolute;
+    width: 10px;
+    height: 10px;    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color:white;
+    line-height: 10px;
+    font-color: white;
+    text-align:center;
+    cursor:pointer; 
+ }
+ 
+ #result {
+     margin: 10px;
+     background: #eee;
+     padding: 10px;
+     height: 40px;
+     overflow: auto;
+}
+
+
