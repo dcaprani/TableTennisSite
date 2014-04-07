@@ -1,0 +1,64 @@
+body, html
+{
+	height: 96%;
+	width: 100%;
+	background-image: url('../images/lgTxtrBg.jpg');
+}
+#content
+{
+	width: 98%;
+	height: 90%;
+	margin-left: 1%;
+	margin-top: 1%;
+	opacity: .5;
+	background-color: brown;
+}
+#welcome
+{
+	font-family: cursive;
+	font-size: large;
+	width: 20%;
+	position: absolute;
+	left: 40%;
+	top: 1%;
+	border: solid 1px;
+	text-align: center;
+	border-color: black;
+	background-color: white;
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
+}
+#welcomeImgs
+{
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	z-index: 9000;
+}
+#welcomeImgs img
+{
+	width: 20%;
+	border: solid white 10px;
+	opacity: 1;
+}
+#IMG_1003
+{
+	position: absolute;
+	left: 20%;
+	top: 20%;
+	z-index: 100;
+	transform:rotate(-7deg);
+	-ms-transform:rotate(-7deg); /* IE 9 */
+	-webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
+}
+#IMG_0981
+{
+	position: absolute;
+	left: 30%;
+	top: 20%;
+	z-index: 50;
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg); /* IE 9 */
+	-webkit-transform:rotate(7deg); /* Opera, Chrome, and Safari */
+}
