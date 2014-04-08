@@ -1,87 +1,3 @@
-body, html
-{
-	height: 96%;
-	width: 100%;
-	background-image: url('../images/lgTxtrBg.jpg');
-}
-#content
-{
-	width: 98%;
-	height: 90%;
-	margin-left: 1%;
-	margin-top: 1%;
-	opacity: .5;
-	background-color: brown;
-	position: absolute;
-}
-#welcome
-{
-	width: 20%;
-	position: absolute;
-	left: 40%;
-	top: 3%;
-	z-index: 23;
-	border: solid 1px;
-	text-align: center;
-	border-color: black;
-	background-color: white;
-	transform:rotate(-2deg);
-	-ms-transform:rotate(-2deg); /* IE 9 */
-	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
-}
-#welcome h1{
-	font-size: 48px;
-	color: rgb(6, 106, 117);
-	padding: 2px 0 10px 0;
-	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
-	font-weight: bold;
-	text-align: center;
-	padding-bottom: 30px;
-}
-/** For the moment only webkit supports the background-clip:text; */
-#welcome h1{
-    background: -webkit-repeating-linear-gradient(-45deg, 
-	rgb(18, 83, 93) , 
-	rgb(18, 83, 93) 20px, 
-	rgb(64, 111, 118) 20px, 
-	rgb(64, 111, 118) 40px, 
-	rgb(18, 83, 93) 40px);
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-}
-#welcomeImgs
-{
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	z-index: 9000;
-}
-#welcomeImgs img
-{
-	width: 20%;
-	border: solid white 10px;
-	opacity: 1;
-}
-#IMG_1003
-{
-	position: absolute;
-	left: 20%;
-	top: 20%;
-	z-index: 100;
-	transform:rotate(-7deg);
-	-ms-transform:rotate(-7deg); /* IE 9 */
-	-webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
-}
-#IMG_0981
-{
-	position: absolute;
-	left: 30%;
-	top: 20%;
-	z-index: 23;
-	transform:rotate(7deg);
-	-ms-transform:rotate(7deg); /* IE 9 */
-	-webkit-transform:rotate(7deg); /* Opera, Chrome, and Safari */
-}
 /* remove codrops styles and reset the whole thing */
 #container_demo{
 	 text-align: left;
@@ -307,8 +223,8 @@ p.change_link{
 	position: absolute;
 	color: rgb(127, 124, 124);
 	left: 0px;
-	height: 5%;
-	width: 88%;
+	height: 20px;
+	width: 440px;
 	padding: 17px 30px 20px 30px;
 	font-size: 16px	;
 	text-align: right;
@@ -377,8 +293,7 @@ p.change_link{
 #register, 
 #login{
 	position: absolute;
-	top: 20%;
-	left: 67%;
+	top: 0px;
 	width: 88%;	
 	padding: 18px 6% 60px 6%;
 	margin: 0 0 35px 0;
@@ -401,46 +316,51 @@ p.change_link{
 #toregister:target ~ #wrapper #register,
 #tologin:target ~ #wrapper #login{
 	z-index: 22;
-	-webkit-animation-name: fadeInLeft;
-	-moz-animation-name: fadeInLeft;
-	-ms-animation-name: fadeInLeft;
-	-o-animation-name: fadeInLeft;
-	animation-name: fadeInLeft;
-	-webkit-animation-delay: .1s;
-	-moz-animation-delay: .1s;
-	-o-animation-delay: .1s;
-	-ms-animation-delay: .1s;
-	animation-delay: .1s;
+	-webkit-animation-delay: .6s;
+	-webkit-animation-timing-function: ease-in;
+	-moz-animation-delay: .6s;
+	-moz-animation-timing-function: ease-in;
+	-o-animation-delay: .6s;
+	-o-animation-timing-function: ease-in;
+	-ms-animation-delay: .6s;
+	-ms-animation-timing-function: ease-in;
+	animation-delay: .6s;
+	animation-timing-function: ease-in;
+	-webkit-animation-name: scaleIn;
+	-moz-animation-name: scaleIn;
+	-ms-animation-name: scaleIn;
+	-o-animation-name: scaleIn;
+	animation-name: scaleIn;
 }
 #toregister:target ~ #wrapper #login,
 #tologin:target ~ #wrapper #register{
-	-webkit-animation-name: fadeOutLeft;
-	-moz-animation-name: fadeOutLeft;
-	-ms-animation-name: fadeOutLeft;
-	-o-animation-name: fadeOutLeft;
-	animation-name: fadeOutLeft;
+	-webkit-animation-timing-function: ease-out;
+	-moz-animation-timing-function: ease-out;
+	-o-animation-timing-function: ease-out;
+	-ms-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	-webkit-animation-name: scaleOut;
+	-moz-animation-name: scaleOut;
+	-ms-animation-name: scaleOut;
+	-o-animation-name: scaleOut;
+	animation-name: scaleOut;
 }
 
 /** the actual animation, credit where due : http://daneden.me/animate/ ***/
 .animate{
 	-webkit-animation-duration: 0.5s;
-	-webkit-animation-timing-function: ease;
 	-webkit-animation-fill-mode: both;
 	
 	-moz-animation-duration: 0.5s;
-	-moz-animation-timing-function: ease;
 	-moz-animation-fill-mode: both;
 	
 	-o-animation-duration: 0.5s;
-	-o-animation-timing-function: ease;
 	-o-animation-fill-mode: both;
 	
 	-ms-animation-duration: 0.5s;
-	-ms-animation-timing-function: ease;
 	-ms-animation-fill-mode: both;
 	
 	animation-duration: 0.5s;
-	animation-timing-function: ease;
 	animation-fill-mode: both;
 }
 
