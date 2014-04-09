@@ -9,53 +9,47 @@
 <script>
 $(document).ready(function() {
 
-  $("button").click(function(){
-    $("div").animate({left:'250px'});
-  });
+$("#slider").change(function() {
+  var slider_value = $("#slider-1").val();
 
-    var images = $('.thumb-wrapper img'); //caches the query when dom is ready
-    var CELL_WIDTH = 150;
+    var images = $('.file-list img'); //caches the query when dom is ready
+    var CELL_WIDTH = 5;
     var ASPECT = 1.5;
-        
-    $("#slider").slider({
-        step: 5,
-        min: 70,
-        max: 200,
-        value: 100,
-        slide: function(event, ui) {
-            var size = (CELL_WIDTH * ui.value / 100) + "px";
-            images.stop(true).animate({width: size, height: size / ASPECT}, 250);
-        }
-    });
+    var size = (CELL_WIDTH * slider_value / 10) + "%";
+    images.animate({width: size, height: size / ASPECT}, 25); 
+});
 
 });
 </script>
 </head>
-<body>
-<button>Start Animation</button>
-<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
-<div style="background:#98bf21;height:100px;width:100px;position:absolute;">
-</div>
+
 <div id="slider">
-<input type="range" name="points" min="70" max="200">10
-<input type="submit">
+<input type="range" id = "slider-1" min="10" max="200" step = "5">
 </div>
 
 <div class="file-list">
- <div class="file-cell">
-    <div class="thumb-wrapper">
-      <img title="mytitle" width="150" alt="myalt" src="images/small/scene1.jpg">
-    </div>
-  </div>
-  <div class="file-cell">
-    <div class="thumb-wrapper">
-      <img title="mytitle" width="150" alt="myalt" src="images/small/scene2.jpg">
-    </div>
-  </div>
-</div>
+      <img title="mytitle"  alt="myalt" src="images/small/scene1.jpg">
 
+      <img title="mytitle"  alt="myalt" src="images/small/scene2.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene3.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene4.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene5.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene6.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene7.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene8.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene9.jpg">
+
+      <img title="mytitle"  alt="myalt" src="images/small/scene10.jpg">
+
+  </div>
 </body>
-
 </html>
 
 
