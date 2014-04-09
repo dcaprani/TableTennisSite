@@ -8,10 +8,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>Fotos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
-        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+		<title>Fotos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Users Fotos shown in strips" />
+        <meta name="keywords" content="Photos, Phamily, Fotos, photo_sharing" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -20,6 +21,11 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
 		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="abCss/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="abCss/demo.css" />
+		<link rel="stylesheet" type="text/css" href="abCss/icons.css" />
+		<link rel="stylesheet" type="text/css" href="abCss/style2.css" />
+		<script src="script/modernizr.custom.js"></script>		
 		<script type="text/javascript" src="script/modernizr.custom.52731.js"></script> 
 		<!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
 	</head>
@@ -98,13 +104,25 @@
 							<li><a href="images/large/scene10.jpg" rel="lightbox[album3]" title="Love"><img src="images/small/scene10.jpg" /></a></li>
 						</ul>
 					</div>
-					<h3 class="pb-title">Images &copy; Sherman Geronimo-Tan</h3>
+					<h3 class="pb-title">Holiday snaps & landscapes</h3>
 				</div>
 				
 			</section>
         </div>
+			<nav id="bt-menu" class="bt-menu">
+				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+				<ul>
+					<li><a href="#" class="bt-icon icon-zoom">Zoom</a></li>
+					<li><a href="#" class="bt-icon icon-refresh">Refresh</a></li>
+					<li><a href="#" class="bt-icon icon-lock">Lock</a></li>
+					<li><a href="#" class="bt-icon icon-speaker">Sound</a></li>
+					<li><a href="#" class="bt-icon icon-star">Favorite</a></li>
+				</ul>
+			</nav>		
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script src="script/lightbox.js"></script>
 	</body>
+	<script src="script/classie.js"></script>
+	<script src="script/borderMenu.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="script/lightbox.js"></script>
 </html>
