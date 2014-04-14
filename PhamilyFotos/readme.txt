@@ -1,0 +1,1 @@
+This site is being developed to enable people to share their photos amongst family & friends free from the constraints and legal entitlements that many social media sites place on users photos & images
