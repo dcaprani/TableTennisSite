@@ -6,9 +6,9 @@
     box-sizing: border-box;
 }
 
-body  {
+/*body  {
 	background: #faae33;
-}
+}*/
 
 .container {
 	padding: 80px;
@@ -31,7 +31,7 @@ body  {
 
 .bt-menu.bt-menu-open {
 	height: 100%;
-	border-width: 30px 90px 90px 30px;
+	border-width: 30px 30px 30px 90px;
 	background-color: rgba(0,0,0,0.3);
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
@@ -48,7 +48,7 @@ body  {
 
 .bt-menu-trigger {
 	position: fixed;
-	right: 20px;
+	left: 20px;
 	bottom: 20px;
 	z-index: 100;
 	display: block;
@@ -120,7 +120,7 @@ body  {
 }
 
 .bt-menu ul:first-of-type {
-	right: 0;
+	left: 2px;
 	bottom: 75px;
 }
 
@@ -211,7 +211,7 @@ body  {
 }
 
 .bt-menu ul li a:before {
-	color: #fff;
+	color: indianred;
 	font-size: 48px;
 	opacity: 0.5;
 	-webkit-transition: opacity 0.2s;
@@ -235,5 +235,21 @@ body  {
 
 	.bt-menu ul:nth-of-type(2) li {
 		width: 60px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.bt-menu.bt-menu-open {
+		height: 100%;
+		border-width: 30px 30px 90px 30px;
+		background-color: rgba(0,0,0,0.3);
+		-webkit-transition: border-width 0.3s, background-color 0.3s;
+		transition: border-width 0.3s, background-color 0.3s;
+	}
+	.bt-menu ul:first-of-type {
+		left: 105px;
+		bottom: 0px;
+	}
+	.bt-menu ul:first-of-type li, .bt-menu ul li a {
+		display: inline-block;
 	}
 }
