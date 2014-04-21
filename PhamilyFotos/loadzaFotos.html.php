@@ -58,73 +58,9 @@
 			</div>
 			<div class="file-list">
 				<?php foreach ($Fotos as $Foto): ?>
-					<?php $src = htmlout($Foto['path']) + htmlout($Foto['FotoName']); ?>
-					<img title = "mytitle" alt = "myalt" src = "<?php echo $src; ?>.jpg">
+					
+					<img title = "mytitle" alt = "myalt" src = "<?php htmlout($Foto['path']) + htmlout($Foto['FotoName']); ?>.jpg">
 				<?php endforeach; ?>
-			  <img title="mytitle"  alt="myalt" src="images/small/scene1.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene2.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene3.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene4.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene5.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene6.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene7.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene8.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene9.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/scene10.jpg">
-			  
-			  <!--************************Grad***************************-->
-			  
-			   <img title="mytitle"  alt="myalt" src="images/small/grad1.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad2.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad3.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad4.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad5.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad6.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad7.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad8.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad9.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/grad10.jpg">
-			  
-				<!--************************Morph***************************-->
-			  
-			  <img title="mytitle"  alt="myalt" src="images/small/morph1.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph2.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph3.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph4.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph5.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph6.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph7.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph8.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph9.jpg">
-
-			  <img title="mytitle"  alt="myalt" src="images/small/morph10.jpg">
-
 		  </div>
 		  </div>
 			<nav id="bt-menu" class="bt-menu">

@@ -84,8 +84,8 @@
 		
 		$sql = "SELECT COUNT(*) FROM Member
 			INNER JOIN MemberRole ON Member.id = Memberid
-			INNER JOIN role ON roleid = role.id
-			WHERE username = '$username' AND role.id = '$role'";
+			INNER JOIN Role ON roleid = Role.id
+			WHERE username = '$username' AND Role.id = '$role'";
 		$result = mysqli_query($link, $sql);
 		if(!result)
 		{

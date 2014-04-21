@@ -1,3 +1,4 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/includesPF/helpers.inc.php'; ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
@@ -55,7 +56,7 @@
 								</p>
                                 <p class="login button">
 									<input type = "hidden" name = "action" value = "login"/>
-                                    <input type="submit" value="Login"  /> 
+                                    <input type="submit" value="Login"/> 
 								</p>
                                 <p class="change_link">
 									Not a member yet ?

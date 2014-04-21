@@ -1,8 +1,8 @@
 <?php
 	include_once $_SERVER['DOCUMENT_ROOT'] .
-	'/includes/magicquotes.inc.php';
+	'/includesPF/magicquotes.inc.php';
 	
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/includesPF/access.inc.php';
 	
 	if (!userIsLoggedIn())
 	{
@@ -19,7 +19,7 @@
 	
 	if (isset($_GET['add']))
 	{
-		include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+		include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
 		
 		$pagetitle = 'New Member';
 		$action = 'addform';
@@ -52,7 +52,7 @@
 	
 	if (isset($_GET['addform']))
 	{
-		include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+		include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
 		$name = mysqli_real_escape_string($link, $_POST['name']);
 		$email = mysqli_real_escape_string($link, $_POST['email']);
 		$sql = "INSERT INTO author SET
@@ -104,7 +104,7 @@
 	
 	if (isset($_POST['action']) and $_POST['action'] == 'Edit')
 	{
-		include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+		include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
 		$id = mysqli_real_escape_string($link, $_POST['id']);
 		$sql = "SELECT id, name, email FROM author WHERE id='$id'";
 		$result = mysqli_query($link, $sql);
@@ -156,7 +156,7 @@
 	}
 	if (isset($_GET['editform']))
 	{
-		include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+		include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
 		$id = mysqli_real_escape_string($link, $_POST['id']);
 		$name = mysqli_real_escape_string($link, $_POST['name']);
 		$email = mysqli_real_escape_string($link, $_POST['email']);
@@ -212,7 +212,7 @@
 	}
 	if (isset($_POST['action']) and $_POST['action'] == 'Delete')
 	{
-		include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+		include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
 		$id = mysqli_real_escape_string($link, $_POST['id']);
 		// Delete role assignments for this author
 		$sql = "DELETE FROM authorrole WHERE authorid='$id'";
@@ -264,17 +264,17 @@
 		exit();
 	}
 	// Display author list
-	include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
-	$result = mysqli_query($link, 'SELECT id, name FROM author');
+	include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
+	$result = mysqli_query($link, 'SELECT * FROM Foto');
 	if (!$result)
 	{
-		$error = 'Error fetching authors from database!';
+		$error = 'Error fetching Fotos from database!';
 		include '../error.html.php';
 		exit();
 	}
 	while ($row = mysqli_fetch_array($result))
 	{
-		$authors[] = array('id' => $row['id'], 'name' => $row['name']);
+		$Fotos[] = array('id' => $row['id'], 'FotoName' => $row['FotoName'], 'Caption' => $row['Caption'], 'path' => $row['path'], 'userId' => $row['userId'], 'albumId' => $row['albumId']);
 	}
-	include 'authors.html.php';
+	include 'loadzaFotos.html.php';
 ?>
