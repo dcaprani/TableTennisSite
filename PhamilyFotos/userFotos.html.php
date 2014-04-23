@@ -30,44 +30,80 @@
 		<script src="script/modernizr.custom.js"></script>		
 		<script type="text/javascript" src="script/modernizr.custom.52731.js"></script> 
 		<!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>
-		$(document).ready(function() {
-
-		$("#slider").change(function() {
-		  var slider_value = $("#slider-1").val();
-
-			var images = $('.file-list img'); //caches the query when dom is ready
-			var CELL_WIDTH = 5;
-			var ASPECT = 1.5;
-			var size = (CELL_WIDTH * slider_value / 10) + "%";
-			images.animate({width: size, height: size / ASPECT }, 25); 
-		});
-
-		});
-	</script>	
 	</head>
 	<body>
 		<div id = "content"></div>			
 		<div class="container">
 			<div id = "welcome">
-				<h1>Loadza Fotos</h1>
-			<div id="slider">
-					<input type="range" id = "slider-1" min="10" max="200" step = "5">
+				<h1>Derek's Fotos</h1>
 			</div>
-			</div>
-			<div class="file-list">
-				<?php foreach ($Fotos as $Foto): ?>
-					
-					<img title = "mytitle" alt = "myalt" src = "<?php htmlout($Foto['path']) + htmlout($Foto['FotoName']); ?>.jpg">
-				<?php endforeach; ?>
-		  </div>
-		  </div>
+						<header>
+			
+				<h1>Photo Booth Strips</h1>
+				<h2><strong>Scroll with your mousewheel or finger</strong></h2>
+				
+				<div class="support-note"><!-- let's check browser support with modernizr -->
+					<!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->
+					<span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+					<!--span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span-->
+					<!--span class="no-csstransitions">CSS transitions are not supported in your browser</span-->
+					<span class="no-generatedcontent">CSS generated content is not supported in your browser</span>
+					<span class="note-ie">Sorry, only modern browsers.</span>
+				</div>
+				
+			</header>
+			
+						<section id="main" class="main">
+				
+				<div class="pb-wrapper pb-wrapper-1">
+					<div class="pb-scroll">
+						<ul class="pb-strip">
+							<?php foreach ($Fotos as $Foto): ?>
+								<?php if ($Foto['albumId'] == 1): ?>
+								<li><a href="images/large/<?php htmlout($Foto['FotoName']); ?>.jpg" rel="lightbox[album3]" title="Spring"><img src="images/small/<?php htmlout($Foto['FotoName']); ?>.jpg" /></a></li>
+								<?php endif; ?>
+							<?php endforeach; ?>
+						</ul>
+						</ul>
+					</div>
+					<h3 class="pb-title">You only live once, but if you do it right, once is enough.</h3>
+				</div>
+				
+				<div class="pb-wrapper pb-wrapper-2">
+					<div class="pb-scroll">
+						<ul class="pb-strip">
+							<?php foreach ($Fotos as $Foto): ?>
+								<?php if ($Foto['albumId'] == 2): ?>
+								<li><a href="images/large/<?php htmlout($Foto['FotoName']); ?>.jpg" rel="lightbox[album3]" title="Spring"><img src="images/small/<?php htmlout($Foto['FotoName']); ?>.jpg" /></a></li>
+								<?php endif; ?>
+							<?php endforeach; ?>
+						</ul>
+						
+						</ul>
+					</div>	
+					<h3 class="pb-title">Morph's Magical Moments</h3>
+				</div>
+				
+				<div class="pb-wrapper pb-wrapper-3">
+					<div class="pb-scroll">
+						<ul class="pb-strip">
+							<?php foreach ($Fotos as $Foto): ?>
+								<?php if ($Foto['albumId'] == 3): ?>
+								<li><a href="images/large/<?php htmlout($Foto['FotoName']); ?>.jpg" rel="lightbox[album3]" title="Spring"><img src="images/small/<?php htmlout($Foto['FotoName']); ?>.jpg" /></a></li>
+								<?php endif; ?>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+					<h3 class="pb-title">Holiday snaps & landscapes</h3>
+				</div>
+				
+			</section>
+        </div>
 			<nav id="bt-menu" class="bt-menu">
 				<a href="#" class="bt-menu-trigger" ><span>Menu</span></a>
 				<ul>
 					<li><a href="loadzaFotos.html"  class="bt-icon icon-zoom">Zoom</a></li>
-					<li><a href="userFotos.php" class="bt-icon icon-refresh">Refresh</a></li>
+					<li><a href="UserPhotos.html" class="bt-icon icon-refresh">Refresh</a></li>
 					<li><a href="#" class="bt-icon icon-lock">Lock</a></li>
 					<li><a href="#" class="bt-icon icon-speaker">Sound</a></li>
 					<li><a href="index.html" class="bt-icon icon-star">Favorite</a></li>

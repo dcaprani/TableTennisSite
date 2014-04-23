@@ -27,8 +27,8 @@
 				Phamily Fotos</h1>
 			</div>
 			<div id = "welcomeImgs">
-				<img id = "scene9" src = "images/large/scene9.jpg" alt = "Gang at Skerries"/>
-				<img id = "scene5" src = "images/large/scene5.jpg" alt = "View at Cobh"/>
+				<img id = "scene9" src = "images/large/image27.jpg" alt = "Gang at Skerries"/>
+				<img id = "scene5" src = "images/large/image31.jpg" alt = "View at Cobh"/>
 			</div>
 			
                 <div id="container_demo" >
@@ -66,11 +66,11 @@
                         </div>
 
                         <div id="register" class="animate form">
-                            <form  action="mysuperscript.php" autocomplete="on"> 
+                            <form  action="?joinform" autocomplete="on" method = "post"> 
                                 <h1> Sign up </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="username" />
                                 </p>
                                 <p> 
                                     <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
