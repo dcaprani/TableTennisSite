@@ -1,7 +1,7 @@
 <?php
 		include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
-		$name = mysqli_real_escape_string($link, $_POST['name']);
-		$email = mysqli_real_escape_string($link, $_POST['email']);
+		$name = mysqli_real_escape_string($link, $_POST['usernamesignup']);
+		$email = mysqli_real_escape_string($link, $_POST['emailsignup']);
 		$sql = "INSERT INTO Member SET
 		name='$name',
 		email='$email'";
@@ -11,6 +11,23 @@
 			$error = 'Error adding submitted Member.';
 			include '../error.html.php';
 			exit();
+		}
+		
+		$MemberId = mysqli_insert_id($link);
+		
+		if ($_POST['passwordsignup'] != '')
+		{
+			$password = md5($_POST['passwordsignup'] . 'ijdb');
+			$password = mysqli_real_escape_string($link, $password);
+			$sql = "UPDATE Member SET
+			password = '$password'
+			WHERE id = '$MemberId'";
+			if (!mysqli_query($link, $sql))
+			{
+				$error = 'Error setting Member password.';
+				include '../error.html.php';
+				exit();
+			}
 		}
 		
 		/***For development purposes assign all roles to new Members****/
@@ -28,26 +45,11 @@
 		{
 			$Roles[] = array(
 			'id' => $row['id'],
-			'Role' => $row['Role'])
+			'Role' => $row['Role']);
 		}
 		/****************************************************/
 		
-		$MemberId = mysqli_insert_id($link);
-		
-		if ($_POST['password'] != '')
-		{
-			$password = md5($_POST['password'] . 'ijdb');
-			$password = mysqli_real_escape_string($link, $password);
-			$sql = "UPDATE Member SET
-			password = '$password'
-			WHERE id = '$MemberId'";
-			if (!mysqli_query($link, $sql))
-			{
-				$error = 'Error setting Member password.';
-				include '../error.html.php';
-				exit();
-			}
-		}
+
 			/**if (isset($_POST['Roles']))
 			{ temporarily commenting out if statement**/
 				//foreach ($_POST['Roles'] as $Role) temporarily 
@@ -79,7 +81,7 @@
 		{
 			$Fotos[] = array('id' => $row['id'], 'FotoName' => $row['FotoName'], 'Caption' => $row['Caption'], 'path' => $row['path'], 'userId' => $row['userId'], 'albumId' => $row['albumId']);
 		}
-		include 'loadzaFotos.html.php';
+		include 'uploadFotos.html.php';
 		
 		exit();
 ?>

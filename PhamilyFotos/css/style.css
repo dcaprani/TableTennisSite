@@ -126,7 +126,19 @@ a.hiddenanchor{
 	position: relative;	
 }
 /**** Styling the form elements **/
-
+.uploadText{
+	font-family: cursive;
+	font-size: 3em;
+	color: blue
+}
+#formHolder{
+	width: 40%;
+	height: 40%;
+	margin-left: 30%;
+	margin-top: 20%;
+	background-color: grey;
+	opacity: .5;
+}
 /**** general text styling ****/
 #wrapper a{
 	color: rgb(95, 155, 198);
@@ -752,6 +764,38 @@ ul.pb-strip li img {
 	}
 	#welcome h1 {
 		font-size: 2em;
+		color: rgb(6, 106, 117);
+		padding: 2px 0 10px 0;
+		font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+		font-weight: bold;
+		text-align: center;
+		padding-bottom: 1%;
+	}
+	#someDiv {
+		width: 50%;
+		position: absolute;
+		left: 37%;
+		top: 3%;
+		z-index: 23;
+		border: solid 1px;
+		text-align: center;
+		border-color: black;
+		background-color: white;
+		transform: rotate(-2deg);
+		-ms-transform: rotate(-2deg);
+		-webkit-transform: rotate(-2deg);
+	}
+	#someDiv h1 {
+		font-size: 2em;
+		color: rgb(6, 106, 117);
+		padding: 2px 0 10px 0;
+		font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+		font-weight: bold;
+		text-align: center;
+		padding-bottom: 1%;
+	}
+	#newMemWelcome h2 {
+		font-size: 1em;
 		color: rgb(6, 106, 117);
 		padding: 2px 0 10px 0;
 		font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
