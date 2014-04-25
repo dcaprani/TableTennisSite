@@ -1,9 +1,13 @@
 <?php
 		include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
-		$name = mysqli_real_escape_string($link, $_POST['usernamesignup']);
+		include_once $_SERVER['DOCUMENT_ROOT'] . '/includesPF/magicquotes.inc.php';
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/includesPF/access.inc.php';
+		
+		
+		$username = mysqli_real_escape_string($link, $_POST['usernamesignup']);
 		$email = mysqli_real_escape_string($link, $_POST['emailsignup']);
 		$sql = "INSERT INTO Member SET
-		name='$name',
+		username='$username',
 		email='$email'";
 		
 		if (!mysqli_query($link, $sql))
@@ -29,6 +33,30 @@
 				exit();
 			}
 		}
+		
+				if(!userIsLoggedIn())
+	{
+		include 'login.html.php';
+		exit();
+	}
+		
+		/*if(databaseContainsMember($username, $password))
+			{
+				session_start();
+				$_SESSION['loggedIn'] = TRUE;
+				$_SESSION['username'] = $username;
+				$_SESSION['password'] = $password;
+				return TRUE;
+			}
+			else
+			{
+				session_start();
+				unset($_SESSION['loggedIn']);
+				unset($_SESSION['username']);
+				unset($_SESSION['password']);
+				$GLOBALS['loginError'] = 'The specified username address or password was incorrect.';
+				return FALSE;
+			}*/
 		
 		/***For development purposes assign all roles to new Members****/
 				// Build the list of Roles

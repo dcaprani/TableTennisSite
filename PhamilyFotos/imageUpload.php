@@ -2,6 +2,10 @@
 	//if(isset($_GET)(['addImage'))
 	//{
 		include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/includesPF/access.inc.php';
+		
+		$userId = getUserId();
+		
 		$allowedExts = array("gif", "jpeg", "jpg", "png");
 		// Set file type, name, size, temp_name variables
 		$fileName = $_FILES["file"]["name"];
@@ -10,6 +14,7 @@
 		$fileTmpNme = $_FILES["file"]["tmp_name"];
 		$fileName = $_FILES["file"]["name"];
 		$fileError = $_FILES["file"]["error"];
+		$filePath = "images/small/";
 		
 		$temp = explode(".", $_FILES["file"]["name"]);
 		$extension = end($temp);
@@ -33,15 +38,19 @@
 				echo "Size: " . $fileSize . "<br>";
 				echo "Temp file: " . $fileTmpNme . "<br>";
 				
-				if(file_exists("images/small/" . $fileName))
+				if(file_exists($filePath . $fileName))
 				{
 					echo $fileName . " already exists. ";
 				}
 				else
 				{
-					if(move_uploaded_file($fileTmpNme,"images/small/" . $fileName))
+					if(move_uploaded_file($fileTmpNme,$filePath . $fileName))
 					{
-					echo "Stored in " . "images/small/" . $fileName;
+					echo "Stored in " . $filePath . $fileName;
+					echo "Stored by User ID No.: " . $username;
+					$sql = "INSERT INTO Foto ('id', 'FotoName', 'Caption', 'path', 'userId', 'albumId')
+					VALUES (NULL, '$fileName', NULL, '$filePath', '$userId', NULL)";
+						
 					}
 					else
 					{

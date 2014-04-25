@@ -104,4 +104,16 @@
 			return FALSE;
 		}
 	}
+	
+	function getUserId()
+	{
+		include 'db.inc.php';
+		$username = mysqli_real_escape_string($link, $_SESSION['username']);
+		$sql = "SELECT id FROM Member
+				WHERE username = '$username'";
+		$result = mysqli_query($link, $sql);
+		$row = mysql_fetch_array($result);
+		$userId = $row['id'];
+		return $userId;
+	}
 ?>
