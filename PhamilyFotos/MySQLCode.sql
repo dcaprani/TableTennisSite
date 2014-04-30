@@ -29,3 +29,18 @@ VALUES (NULL, '1', '3'),
 (NULL, '1', '30'),
 (NULL, '1', '31'),
 (NULL, '1', '32');
+
+INSERT INTO 'PhamilyFotos'.'Foto' ('id', 'FotoName', 'Caption', 'path', 'userId', 'albumId')
+VALUES (NULL, 'image33', 'NULL', 'images/small/', '2', '3'),
+(NULL, 'image33', NULL, 'images/small/', '2', '3'),
+(NULL, 'image34', NULL, 'images/small/', '2', '3'),
+(NULL, 'image35', NULL, 'images/small/', '2', '3'),
+(NULL, 'image36', NULL, 'images/small/', '2', '3'),
+(NULL, 'image37', NULL, 'images/small/', '2', '3'),
+(NULL, 'image38', NULL, 'images/small/', '2', '3'),
+(NULL, 'image39', NULL, 'images/small/', '2', '3'),
+(NULL, 'image40', NULL, 'images/small/', '2', '3'),
+(NULL, 'image41', NULL, 'images/small/', '2', '3'),
+(NULL, 'image42', NULL, 'images/small/', '2', '3'),
+(NULL, 'image43', NULL, 'images/small/', '2', '3'),
+(NULL, 'image44', NULL, 'images/small/', '2', '3');

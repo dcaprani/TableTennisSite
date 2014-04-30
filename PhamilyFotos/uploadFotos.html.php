@@ -1,7 +1,7 @@
-
+<?php include_once $_SERVER['DOCUMENT_ROOT'] .
+	'/includesPF/helpers.inc.php'; ?>
 <!DOCTYPE html>
-<!--<?php include_once $_SERVER['DOCUMENT_ROOT'] .
-	'/includesPF/helpers.inc.php'; ?>-->
+<!---->
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->

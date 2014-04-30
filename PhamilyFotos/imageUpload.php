@@ -4,7 +4,7 @@
 		include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 		require_once $_SERVER['DOCUMENT_ROOT'] . '/includesPF/access.inc.php';
 		
-		$userId = getUserId();
+		$userId =  getLoggedInUserId();
 		
 		$allowedExts = array("gif", "jpeg", "jpg", "png");
 		// Set file type, name, size, temp_name variables
@@ -47,7 +47,7 @@
 					if(move_uploaded_file($fileTmpNme,$filePath . $fileName))
 					{
 					echo "Stored in " . $filePath . $fileName;
-					echo "Stored by User ID No.: " . $username;
+					echo "Stored by User ID No.: " . $userId;
 					$sql = "INSERT INTO Foto ('id', 'FotoName', 'Caption', 'path', 'userId', 'albumId')
 					VALUES (NULL, '$fileName', NULL, '$filePath', '$userId', NULL)";
 						

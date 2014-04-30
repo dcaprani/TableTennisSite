@@ -57,8 +57,7 @@
 			</div>
 			</div>
 			<div class="file-list">
-				<?php foreach ($Fotos as $Foto): ?>
-					
+				<?php foreach ($Fotos as $Foto): ?>		
 					<img title = "mytitle" alt = "myalt" src = "<?php htmlout($Foto['path']) + htmlout($Foto['FotoName']); ?>.jpg">
 				<?php endforeach; ?>
 		  </div>
@@ -68,7 +67,7 @@
 				<ul>
 					<li><a href="loadzaFotos.html"  class="bt-icon icon-zoom">Zoom</a></li>
 					<li><a href="userFotos.php" class="bt-icon icon-refresh">Refresh</a></li>
-					<li><a href="#" class="bt-icon icon-lock">Lock</a></li>
+					<li><a href="uploadFotos.html.php" class="bt-icon icon-lock">Lock</a></li>
 					<li><a href="#" class="bt-icon icon-speaker">Sound</a></li>
 					<li><a href="index.html" class="bt-icon icon-star">Favorite</a></li>
 				</ul>

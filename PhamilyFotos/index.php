@@ -6,7 +6,7 @@
 	
 	if (!userIsLoggedIn())
 	{
-		include '../login.html.php';
+		include 'login.html.php';
 		exit();
 	}
 	
@@ -298,9 +298,12 @@
 		header('Location: .');
 		exit();
 	}
-	// Display Fotos for current member
+	// Display Fotos for currently logged in member
+	if(
+	$userId = getLoggedInUserId();
+	echo 'User Id = " . &userId;
 	include $_SERVER['DOCUMENT_ROOT'] . '/includesPF/db.inc.php';
-	$result = mysqli_query($link, 'SELECT * FROM Foto');
+	$result = mysqli_query($link, "SELECT * FROM Foto WHERE id = '$userId'");
 	if (!$result)
 	{
 		$error = 'Error fetching Fotos from database!';

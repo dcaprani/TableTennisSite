@@ -105,12 +105,62 @@
 		}
 	}
 	
-	function getUserId()
+		function userRegistered($username, $password)
+	{
+		//if(isset($_POST['action']) and $_POST['action'] == 'login')
+		//{
+			/*if(!isset($_POST['username']) or $_POST['username'] == ''or
+			!isset($_POST['password']) or $_POST['password'] == '')
+			{
+				$GLOBALS['loginError'] = 'Please fill in both fields';
+				return FALSE;
+			}*/
+			//$password = md5($_POST['password'] . 'ijdb');			
+		
+			if(databaseContainsMember($username, $password))
+			{
+				session_start();
+				$_SESSION['loggedIn'] = TRUE;
+				$_SESSION['username'] = $username;
+				$_SESSION['password'] = $password;
+				return TRUE;
+			}
+			else
+			{
+				session_start();
+				unset($_SESSION['loggedIn']);
+				unset($_SESSION['username']);
+				unset($_SESSION['password']);
+				$GLOBALS['loginError'] = 'The specified username address or password was incorrect.';
+				return FALSE;
+			}
+		//}
+		
+		if(isset($_POST['action']) and $_POST['action'] == 'logout')
+		{
+			session_start();
+			unset($_SESSION['loggedIn']);
+			unset($_SESSION['username']);
+			unset($_SESSION['password']);
+			header('Location: ' . $_POST['goto']);
+			exit();
+		}
+		
+		session_start();
+		if(isset($_SESSION['loggedIn']))
+		{
+			return databaseContainsMember($_SESSION['username'],$_SESSION['password']);
+		}
+	}
+	
+	function getLoggedInUserId()
 	{
 		include 'db.inc.php';
-		$username = mysqli_real_escape_string($link, $_SESSION['username']);
+		$username = $_SESSION['username'];
+		$password = $_SESSION['password'];
 		$sql = "SELECT id FROM Member
-				WHERE username = '$username'";
+				WHERE username = '$username'
+				AND password = '$password'";
 		$result = mysqli_query($link, $sql);
 		$row = mysql_fetch_array($result);
 		$userId = $row['id'];

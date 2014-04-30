@@ -34,30 +34,6 @@
 			}
 		}
 		
-				if(!userIsLoggedIn())
-	{
-		include 'login.html.php';
-		exit();
-	}
-		
-		/*if(databaseContainsMember($username, $password))
-			{
-				session_start();
-				$_SESSION['loggedIn'] = TRUE;
-				$_SESSION['username'] = $username;
-				$_SESSION['password'] = $password;
-				return TRUE;
-			}
-			else
-			{
-				session_start();
-				unset($_SESSION['loggedIn']);
-				unset($_SESSION['username']);
-				unset($_SESSION['password']);
-				$GLOBALS['loginError'] = 'The specified username address or password was incorrect.';
-				return FALSE;
-			}*/
-		
 		/***For development purposes assign all roles to new Members****/
 				// Build the list of Roles
 		$sql = "SELECT id, Role FROM Role";
@@ -76,8 +52,6 @@
 			'Role' => $row['Role']);
 		}
 		/****************************************************/
-		
-
 			/**if (isset($_POST['Roles']))
 			{ temporarily commenting out if statement**/
 				//foreach ($_POST['Roles'] as $Role) temporarily 
@@ -94,6 +68,16 @@
 					exit();
 				}
 			}
+		if(!userRegistered($username, $password))
+		{
+			include 'login.html.php/#register';
+			exit()
+		}else
+		{
+			include'uploadFotos.html.php';
+			exit();
+		}
+		
 		//} temporarily commenting out closing bracket of if statement
 		//header('Location: .');
 			// Display Fotos for current member
