@@ -16,7 +16,7 @@ body, html
 }
 #welcome
 {
-	width: 20%;
+	width: 15%;
 	position: absolute;
 	left: 40%;
 	top: 3%;
@@ -30,7 +30,7 @@ body, html
 	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
 }
 #welcome h1{
-	font-size: 48px;
+	font-size: 30px;
 	color: rgb(6, 106, 117);
 	padding: 2px 0 10px 0;
 	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
