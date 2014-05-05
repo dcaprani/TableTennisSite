@@ -57,10 +57,7 @@
 			</div>
 			</div>
 			<div class="file-list">
-				<?php foreach ($Fotos as $Foto): ?>
-					<?php $src = htmlout($Foto['path']) + htmlout($Foto['FotoName']); ?>
-					<img title = "mytitle" alt = "myalt" src = "<?php echo $src; ?>.jpg">
-				<?php endforeach; ?>
+
 			  <img title="mytitle"  alt="myalt" src="images/small/scene1.jpg">
 
 			  <img title="mytitle"  alt="myalt" src="images/small/scene2.jpg">
@@ -130,11 +127,11 @@
 			<nav id="bt-menu" class="bt-menu">
 				<a href="#" class="bt-menu-trigger" ><span>Menu</span></a>
 				<ul>
-					<li><a href="loadzaFotos.html"  class="bt-icon icon-zoom">Zoom</a></li>
-					<li><a href="UserPhotos.html" class="bt-icon icon-refresh">Refresh</a></li>
-					<li><a href="#" class="bt-icon icon-lock">Lock</a></li>
-					<li><a href="#" class="bt-icon icon-speaker">Sound</a></li>
-					<li><a href="index.html" class="bt-icon icon-star">Favorite</a></li>
+					<li><a href="loadzaFotos.html" ><img class = "menuIcons" src = "MenuIcons/loadzaFotosIcon.png" title ="Your Fotos"></a></li>
+					<li><a href="userFotos.php" class="bt-icon"><img class = "menuIcons" src = "MenuIcons/newAlbumIcon.png" title ="Create New Album"></a></li>
+					<li><a href="uploadFotos.html.php" class="bt-icon"><img class = "menuIcons" src = "MenuIcons/uploadIcon.png" title ="Upload New Fotos"></a></li>
+					<li><a href="#" class="bt-iconr"><img class = "menuIcons" src = "MenuIcons/addToAlbumIcon.png" title ="Add Fotos To Album"></a></li>
+					<li><a href="index.html" class="bt-icon"><img class = "menuIcons" src = "MenuIcons/logOutIcon.png" title ="Log Out"></a></li>
 				</ul>
 			</nav>		
 

@@ -16,10 +16,10 @@ body, html
 }
 #welcome
 {
-	width: 15%;
+	width: 20%;
 	position: absolute;
-	left: 40%;
-	top: 3%;
+	left: 43%;
+	top: 0%;
 	z-index: 23;
 	border: solid 1px;
 	text-align: center;
@@ -30,13 +30,19 @@ body, html
 	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
 }
 #welcome h1{
-	font-size: 30px;
+	font-size: 25px;
 	color: rgb(6, 106, 117);
 	padding: 2px 0 10px 0;
 	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
 	font-weight: bold;
 	text-align: center;
 	padding-bottom: 1%;
+}
+#slider{
+	width: 100%;
+}
+#slider-1{
+	100%;
 }
 /** For the moment only webkit supports the background-clip:text; */
 #welcome h1{
@@ -124,6 +130,10 @@ body, html
 	 padding: 0;
 	 margin: 0 auto;
 	 font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
+}
+
+.menuIcons:hover{
+	opacity: 0.5;
 }
 
 /** fonts used for the icons **/ 

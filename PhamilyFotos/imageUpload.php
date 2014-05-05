@@ -24,7 +24,7 @@
 		||($fileType == "image/pjpeg")
 		||($fileType == "image/x-png")
 		||($fileType == "image/png"))
-		&& ($fileSize< 1000000)
+		&& ($fileSize< 2000000)
 		&& in_array($extension, $allowedExts))
 		{
 			if($fileError > 0)

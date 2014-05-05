@@ -60,7 +60,7 @@
 						<ul class="pb-strip">
 							<?php foreach ($Fotos as $Foto): ?>
 								<?php if ($Foto['albumId'] == 1): ?>
-								<li><a href="images/large/<?php htmlout($Foto['FotoName']); ?>.jpg" rel="lightbox[album3]" title="Spring"><img src="images/small/<?php htmlout($Foto['FotoName']); ?>.jpg" /></a></li>
+								<li><a href="images/large/<?php htmlout($Foto['FotoName']); ?>" rel="lightbox[album3]" title="Spring"><img src="images/small/<?php htmlout($Foto['FotoName']); ?>.jpg" /></a></li>
 								<?php endif; ?>
 							<?php endforeach; ?>
 						</ul>

@@ -210,7 +210,7 @@
 	font-size: 0px;
 }
 
-.bt-menu ul li a:before {
+.bt-menu ul li a img:before {
 	color: indianred;
 	font-size: 48px;
 	opacity: 0.5;
@@ -218,8 +218,8 @@
 	transition: opacity 0.2s;
 }
 
-.bt-menu ul li a:hover:before,
-.bt-menu ul li a:focus:before  {
+.bt-menu ul li a img:hover:before,
+.bt-menu ul li a img:focus:before  {
 	opacity: 1;
 }
 
