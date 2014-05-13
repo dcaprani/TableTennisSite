@@ -135,6 +135,9 @@ body, html
 .menuIcons:hover{
 	opacity: 0.5;
 }
+.menuIcon{
+	width: 70px;
+}
 
 /** fonts used for the icons **/ 
 @font-face {
