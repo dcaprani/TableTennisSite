@@ -18,6 +18,22 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css"/>
+		<script type = "text/javascript">
+			function comPWords(){
+				var p1 = document.getElementById('passwordsignup').value;
+				var p2 = document.getElementById('passwordsignup_confirm').value;
+				if(p1 != p2){
+					document.getElementById('pWordMsg').style.color ="red";
+					document.getElementById('pWordMsg').innerHTML = "X";
+					document.getElementById('signinBtn').disabled = "true";
+				}else{
+					document.getElementById('pWordMsg').style.color ="green";
+					document.getElementById('pWordMsg').innerHTML = "&#10004";
+					document.getElementById('signinBtn').disabled = "false";
+				}
+			}
+		</script>
+		
 	</head>
 	<body><section>
 		<div id = "content"></div>			
@@ -76,16 +92,17 @@
                                     <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
                                     <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
                                 </p>
+								
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
                                     <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                 </p>
                                 <p> 
                                     <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
-                                </p>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" onkeyup = "comPWords()" placeholder="eg. X8df!90EO"/><div id = "pWordMsg"></div>									
+								</p>
                                 <p class="signin button"> 
-									<input type="submit" value="Sign up"/> 
+									<input id = "signinBtn" type="submit" value="Sign up"/> 
 								</p>
                                 <p class="change_link">  
 									Already a member ?

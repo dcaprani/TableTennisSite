@@ -42,7 +42,14 @@ body, html
 	width: 100%;
 }
 #slider-1{
-	100%;
+	width: 100%;
+}
+
+#pWordMsg{
+	width: 10px;
+	position: absolute;
+	right: 10%;
+	bottom: 29%;
 }
 /** For the moment only webkit supports the background-clip:text; */
 #welcome h1{
