@@ -30,8 +30,33 @@
 		<script src="script/modernizr.custom.js"></script>		
 		<script type="text/javascript" src="script/modernizr.custom.52731.js"></script> 
 		<!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+		<script>
+			
+			/*function showMenuHint()
+			{
+				if(done == false){
+					var overlay = document.getElementById("overlay");
+					var popup = document.getElementById("popup");
+					overlay.style.display = "block";
+					popup.style.display = "block";
+					done = true;
+				}
+			}
+			
+			function closePopup()
+			{
+				var overlay = document.getElementById("overlay");
+				var popup = document.getElementById("popup");
+				overlay.style.display = "none";
+				popup.style.display = "none";
+			}*/	
+		</script>
 	</head>
-	<body>
+	<body onload = "showMenuHint()">
+		<div id ="overlay"></div>
+		<div id = "popup"><img src = "MenuIcons/HintScreen.png"/>
+		<button id ="CloseBtn" onClick = "closePopup()">X</button>
+		</div>
 		<div id = "content"></div>			
 		<div class="container">
 			<div id = "welcome">
@@ -117,6 +142,7 @@
 			</nav>		
 
 	</body>
+	<script src="script/script.js"></script>
 	<script src="script/classie.js"></script>
 	<script src="script/borderMenu.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
